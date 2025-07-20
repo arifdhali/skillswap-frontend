@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar'; // ✅ Correct import
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true, // ✅ Required for standalone components
+  imports: [
+    RouterOutlet,
+    RouterModule,
+    MatToolbarModule // ✅ Use the actual imported symbol
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss'] // ✅ should be `styleUrls`, not `styleUrl`
 })
 export class App {
   protected title = 'swap-frontend';
