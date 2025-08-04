@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
 :root {
   --color_1: #000;
   --color_2: #fff;
@@ -14,8 +8,15 @@
   --hover-1: #bebebe;
 
   --transitions: all 0.3s ease;
-  --body__font-size: 18px;
-  --bold_heading_font: "Sofia", cursive;
+  --body__font-size: 16px;
+  --bold_heading_font: "Poppins", sans-serif;
+  --body__font: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body__font);
 }
 a {
   color: var(--color_2);
@@ -291,8 +292,10 @@ video {
 .donations {
   /*padding: 50px*/
   background-color: #171b24;
-  width: 500px;
-  color:#fff;
+  color: #fff;
+  .donate {
+    width: 500px;
+  }
 }
 .donate p {
   line-height: 24px;
@@ -380,7 +383,7 @@ video {
   padding: 25px;
   background-color: #1e252d;
 }
-.donate-submit button {  
+.donate-submit button {
   width: 100%;
   background-color: red;
   border: none;
@@ -431,6 +434,83 @@ video {
   background: red;
 }
 
-.donations{
+.form-control {
+  border: none;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background: #fff;
+  color: #495057;
+  &:focus {
+    box-shadow: none;
+  }  
+}
+::placeholder{
+    color: #b3b3b3 !important;
+}
+.login {
+  .form-control {
+    height: 54px;
+  }
+  label {
+    font-size: 16px;
+  }
+}
+.login {
+  background: #f6f7fc;
+  .content {
+    max-width: 530px;
+    width: 100%;
+  }
+  a {
+    color: var(--color_3);
+  }
+}
+.optional {
+  color: #b3b3b3;
+  font-family: var(--body__font);
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  margin-bottom: 4px;
+}
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+  border-radius: 4px;
+  appearance: none;
+  &:checked {
+    display: block;
+    color: #fff;
+    background: var(--color_1);
+  }
+}
+.login-bg {
+  background-image: url("/images/bg_1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 700px;
+  height: 100vh;
+}
+.remember {
+  & * {
+    font-size: 14px;
+    line-height: 1;
+    color: #b3b3b3;
+  }
+  a {
+    color: #b3b3b3;
+  }
+}
 
+.profile{
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+  i{
+    color: var(--color_4);
+  }
 }
