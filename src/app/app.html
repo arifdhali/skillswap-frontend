@@ -1,57 +1,5 @@
-<header class="header">
-  <div class="container">
-    <mat-toolbar color="primary" class="mat-elevation-z4 py-2">
-      <mat-toolbar-row class="justify-content-between px-0">
-        <a [routerLink]="['/']" class="app-title">SwapSkill</a>
-        <ul class="d-flex gap-5 menu">
-          <li>
-            <a
-              mat-button
-              [routerLink]="['/']"
-              routerLinkActive="current-page"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Home</a
-            >
-          </li>
-            <li>
-            <a
-              mat-button
-              [routerLink]="['/users']"
-              routerLinkActive="current-page"
-              >Users</a
-            >
-          </li>
-          <li>
-            <a
-              mat-button
-              [routerLink]="['/pricing']"
-              routerLinkActive="current-page"
-              >Price</a
-            >
-          </li>
-          <li>
-            <a
-              mat-button
-              [routerLink]="['/contact']"
-              routerLinkActive="current-page"
-              >Contact</a
-            >
-          </li>
-        </ul>
-
-        <a [routerLink]="['/login']" class="btn btn-primary">Join Now</a>
-        <!-- <div class="">
-            <a class="profile bg-white  d-flex align-items-center justify-content-center" [routerLink]="['/profile']">
-                <i class="fa-solid fa-user fs-5"></i>
-            </a>
-        </div> -->
-      </mat-toolbar-row>
-    </mat-toolbar>
-  </div>
-</header>
-
+<app-navbar></app-navbar>
 <router-outlet></router-outlet>
-
 <footer class="footer-section">
   <div class="container">
     <div class="footer-cta pt-5 pb-5">

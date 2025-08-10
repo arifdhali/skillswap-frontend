@@ -4,7 +4,7 @@ import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
 import { Contact } from './pages/contact/contact';
 import { Pricing } from './pages/pricing/pricing';
-import { User } from './user/user/user';
+import { User } from './pages/user/user';
 
 export const routes: Routes = [
     {path:"",component:Home},

@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar'; // ✅ Correct import
+import {RouterOutlet } from '@angular/router';
+import { Navbar } from "./navbar/navbar";
 
 @Component({
   selector: 'app-root',
-  standalone: true, // ✅ Required for standalone components
-  imports: [
-    RouterOutlet,
-    RouterModule,
-    MatToolbarModule // ✅ Use the actual imported symbol
-  ],
+  standalone: true, 
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'] // ✅ should be `styleUrls`, not `styleUrl`
 })
